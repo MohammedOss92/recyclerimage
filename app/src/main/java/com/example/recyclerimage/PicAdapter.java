@@ -35,9 +35,9 @@ public class PicAdapter extends RecyclerView.Adapter<PicAdapter.MyViewHolder> {
 //        imageId=osImages;
 //    }
 
-public PicAdapter(Context context) {
+public PicAdapter(Context context,int[] osImages) {
         this.con = context;
-
+        imageId=osImages;
     }
 
     @NonNull
@@ -59,7 +59,8 @@ public PicAdapter(Context context) {
                 // Sending image id to FullScreenActivity
                 Intent i = new Intent(con, FullImage.class);
 //                // passing array index
-                i.putExtra("id",osImages[ii]);
+//                i.putExtra("id",osImages[ii]);
+                i.putExtra("index", ii);
                 con.startActivity(i);
             }
         });

@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         mRecyclerView = (RecyclerView) findViewById(R.id.recycler_frag_two);
 
         mLayoutManager = new GridLayoutManager(this, 2);
-        picAdapter = new PicAdapter(this);
+        picAdapter = new PicAdapter(this,PicAdapter.osImages);
         mRecyclerView.setLayoutManager(mLayoutManager);
 
         mRecyclerView.setHasFixedSize(true);
